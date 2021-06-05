@@ -14,6 +14,7 @@ class TabelaVoluntarios (db: SQLiteDatabase) {
                 CAMPO_EMAIL + " TEXT NOT NULL, " +
                 CAMPO_DISPONIBILIDADE + " BOOLEAN NOT NULL, " +
                 CAMPO_TELEMOVEL + " INTEGER NOT NULL, " +
+                CAMPO_AREA_CONHECIMENTO + " TEXT NOT NULL, " +
                 ")")
     }
 
@@ -24,6 +25,7 @@ class TabelaVoluntarios (db: SQLiteDatabase) {
         const val CAMPO_EMAIL = "necessidade"
         const val CAMPO_DISPONIBILIDADE = "data nascimento"
         const val CAMPO_TELEMOVEL = "telemovel"
+        const val CAMPO_AREA_CONHECIMENTO = "area conhecimento"
 
     }
 }
