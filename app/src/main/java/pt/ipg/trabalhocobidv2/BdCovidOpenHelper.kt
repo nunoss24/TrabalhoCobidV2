@@ -10,6 +10,8 @@ class BdCovidOpenHelper (context: Context?)
         if (db != null) {
             TabelaVoluntarios(db).cria()
             TabelaAfetados(db).cria()
+            TabelaEntidades(db).cria()
+            TabelaIntermediarias(db).cria()
         }
     }
 
