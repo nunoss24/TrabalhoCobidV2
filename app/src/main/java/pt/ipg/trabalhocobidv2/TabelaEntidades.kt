@@ -14,7 +14,7 @@ class TabelaEntidades (db: SQLiteDatabase) {
                     BaseColumns._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     CAMPO_OFERTAS + " TEXT NOT NULL, " +
                     CAMPO_NOME + " TEXT NOT NULL, " +
-                    CAMPO_TELEMOVEL + " INTEGER NOT NULL, " +
+                    CAMPO_TELEMOVEL + " INTEGER NOT NULL " +
                     ")")
     }
     fun insert(values: ContentValues): Long {

@@ -17,7 +17,7 @@ class TabelaAfetados (db: SQLiteDatabase) {
                     CAMPO_NECESSIDADE + " TEXT NOT NULL, " +
                     CAMPO_DATA_NASCIMENTO + " INTEGER NOT NULL, " +
                     CAMPO_TELEMOVEL + " INTEGER NOT NULL, " +
-                    CAMPO_DESCRCAO_PROBLEMA + " TEXT NOT NULL, " +
+                    CAMPO_DESCRCAO_PROBLEMA + " TEXT NOT NULL " +
                     ")")
     }
 

@@ -16,7 +16,7 @@ class TabelaVoluntarios (db: SQLiteDatabase) {
                 CAMPO_EMAIL + " TEXT NOT NULL, " +
                 CAMPO_DISPONIBILIDADE + " BOOLEAN NOT NULL, " +
                 CAMPO_TELEMOVEL + " INTEGER NOT NULL, " +
-                CAMPO_AREA_CONHECIMENTO + " TEXT NOT NULL, " +
+                CAMPO_AREA_CONHECIMENTO + " TEXT NOT NULL " +
                 ")")
     }
 
