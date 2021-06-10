@@ -1,4 +1,4 @@
-package pt.ipg.trabalhocobidv2
+    package pt.ipg.trabalhocobidv2
 
 import android.content.ContentValues
 import android.database.Cursor
@@ -9,13 +9,8 @@ class TabelaIntermediarias (db: SQLiteDatabase) {
     private val db: SQLiteDatabase = db
 
     fun cria() {
-        db.execSQL(
-            "CREATE TABLE " + NOME_TABELA + "(" +
-                    "FOREIGN KEY,(" + BaseColumns._ID + ") " +
-                    "REFERENCES " + TabelaAfetados.NOME_TABELA  +
-                    "FOREIGN KEY(" + BaseColumns._ID + ") " +
-                    "REFERENCES " + TabelaVoluntarios.NOME_TABELA  +
-                    ")")
+        db.execSQL("CREATE TABLE $NOME_TABELA (${BaseColumns._ID} INTEGER PRIMARY KEY AUTOINCREMENT, $CAMPO_ID_AFETADO INTEGER NOT NULL, $CAMPO_ID_VOLUNTARIO INTEGER NOT NULL, FOREIGN KEY($CAMPO_ID_AFETADO) REFERENCES ${TabelaAfetados.NOME_TABELA}, FOREIGN KEY($CAMPO_ID_VOLUNTARIO) REFERENCES ${TabelaVoluntarios.NOME_TABELA})")
+        //, $CAMPO_ID_VOLUNTARIO INTEGER NOT NULL, FOREIGN KEY($CAMPO_ID_VOLUNTARIO) REFERENCES ${TabelaVoluntarios.NOME_TABELA}
     }
     fun insert(values: ContentValues): Long {
         return db.insert(TabelaVoluntarios.NOME_TABELA, null, values)
@@ -42,6 +37,8 @@ class TabelaIntermediarias (db: SQLiteDatabase) {
 
     companion object {
         const val NOME_TABELA = "Intermediaria"
-
+        const val CAMPO_ID_AFETADO = "id_afetado"
+        const val CAMPO_ID_VOLUNTARIO = "id_voluntario"
+        
     }
 }

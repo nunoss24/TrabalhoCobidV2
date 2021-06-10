@@ -9,13 +9,8 @@ class TabelaEntidades (db: SQLiteDatabase) {
     private val db: SQLiteDatabase = db
 
     fun cria() {
-        db.execSQL(
-            "CREATE TABLE " + NOME_TABELA + "(" +
-                    BaseColumns._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                    CAMPO_OFERTAS + " TEXT NOT NULL, " +
-                    CAMPO_NOME + " TEXT NOT NULL, " +
-                    CAMPO_TELEMOVEL + " INTEGER NOT NULL " +
-                    ")")
+        db.execSQL("CREATE TABLE $NOME_TABELA (${BaseColumns._ID} INTEGER PRIMARY KEY AUTOINCREMENT, $CAMPO_NOME TEXT NOT NULL, $CAMPO_OFERTAS TEXT NOT NULL, $CAMPO_TELEMOVEL TEXT NOT NULL)")
+
     }
     fun insert(values: ContentValues): Long {
         return db.insert(TabelaVoluntarios.NOME_TABELA, null, values)
