@@ -40,5 +40,6 @@ class TabelaEntidades (db: SQLiteDatabase) {
         const val CAMPO_NOME = "nome"
         const val CAMPO_OFERTAS = "ofertas"
         const val CAMPO_TELEMOVEL = "telemovel"
+        val TODOS_CAMPOS = arrayOf(BaseColumns._ID, CAMPO_NOME, CAMPO_OFERTAS, CAMPO_TELEMOVEL)
     }
 }
