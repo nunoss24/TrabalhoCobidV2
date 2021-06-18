@@ -27,22 +27,23 @@ class TabelaVoluntarios (db: SQLiteDatabase) {
 
     fun query(
         columns: Array<String>,
-        selection: String,
-        selectionArgs: Array<String>,
-        groupBy: String,
-        having: String,
-        orderBy: String
+        selection: String?,
+        selectionArgs: Array<String>?,
+        groupBy: String?,
+        having: String?,
+        orderBy: String?
     ): Cursor? {
         return db.query(NOME_TABELA, columns, selection, selectionArgs, groupBy, having, orderBy)
     }
     companion object {
         const val NOME_TABELA = "voluntarios"
         const val CAMPO_NOME = "nome"
-        const val CAMPO_LOCALIZACAO = "endereco"
-        const val CAMPO_EMAIL = "necessidade"
-        const val CAMPO_DISPONIBILIDADE = "data_nascimento"
+        const val CAMPO_LOCALIZACAO = "localizacao"
+        const val CAMPO_EMAIL = "email"
+        const val CAMPO_DISPONIBILIDADE = "disponibilidade"
         const val CAMPO_TELEMOVEL = "telemovel"
         const val CAMPO_AREA_CONHECIMENTO = "area_conhecimento"
+        val TODOS_CAMPOS = arrayOf(BaseColumns._ID, CAMPO_NOME, CAMPO_LOCALIZACAO, CAMPO_EMAIL,CAMPO_DISPONIBILIDADE,CAMPO_TELEMOVEL,CAMPO_AREA_CONHECIMENTO)
 
     }
 }
